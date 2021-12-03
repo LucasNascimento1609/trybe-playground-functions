@@ -1,3 +1,6 @@
+/* eslint-disable max-lines-per-function */
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable complexity */
 // Desafio 1
 function compareTrue(parametro1, parametro2) {
   if (parametro1 === true && parametro2 === true) {
@@ -54,8 +57,28 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = 0;
+  let distanceCat2 = 0;
+
+  if (mouse < cat1) {
+    distanceCat1 = cat1 - mouse;
+  } else {
+    distanceCat1 = mouse - cat1;
+  }
+
+  if (mouse < cat2) {
+    distanceCat2 = cat2 - mouse;
+  } else {
+    distanceCat2 = mouse - cat2;
+  }
+
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  } else if (distanceCat2 < distanceCat1) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
