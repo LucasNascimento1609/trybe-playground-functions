@@ -100,20 +100,65 @@ function fizzBuzz(arrayNumeros) {
   return resultado;
 }
 
-let teste1 = [2, 15, 7, 9, 45];
-let teste2 = [7, 9];
-let teste3 = [9, 25];
-
-console.log(fizzBuzz(teste1));
-console.log(fizzBuzz(teste2));
-console.log(fizzBuzz(teste3));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringEncode) {
+  let stringSeparada = stringEncode.split('');
+  let stringCodificada = [];
+
+  for (let i = 0; i < stringEncode.length; i += 1) {
+    switch (stringSeparada[i]) {
+      case 'a':
+        stringCodificada.push('1');
+        break;
+      case 'e':
+        stringCodificada.push('2');
+        break;
+      case 'i':
+        stringCodificada.push('3');
+        break;
+      case 'o':
+        stringCodificada.push('4');
+        break;
+      case 'u':
+        stringCodificada.push('5');
+        break;
+      default:
+        stringCodificada.push(stringSeparada[i]);
+        break;
+    }
+  }
+
+  return stringCodificada.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(stringDecode) {
+  let stringSeparada = stringDecode.split('');
+  let stringDecodificada = [];
+
+  for (let i = 0; i < stringDecode.length; i += 1) {
+    switch (stringSeparada[i]) {
+      case '1':
+        stringDecodificada.push('a');
+        break;
+      case '2':
+        stringDecodificada.push('e');
+        break;
+      case '3':
+        stringDecodificada.push('i');
+        break;
+      case '4':
+        stringDecodificada.push('o');
+        break;
+      case '5':
+        stringDecodificada.push('u');
+        break;
+      default:
+        stringDecodificada.push(stringSeparada[i]);
+        break;
+    }
+  }
+
+  return stringDecodificada.join('');
 }
 
 module.exports = {
