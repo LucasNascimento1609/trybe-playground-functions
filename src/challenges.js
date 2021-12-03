@@ -126,6 +126,7 @@ function encode(stringEncode) {
   }
 
   return stringCodificada.join('');
+  // Aprendi a usar o .split e .join ao buscar em outro exercício como trazer uma string de trás para frente no StackOverflow: https://pt.stackoverflow.com/questions/5943/como-inverter-uma-string-em-javascript
 }
 
 function decode(stringDecode) {
