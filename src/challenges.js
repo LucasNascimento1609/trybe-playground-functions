@@ -1,6 +1,3 @@
-/* eslint-disable max-lines-per-function */
-/* eslint-disable sonarjs/cognitive-complexity */
-/* eslint-disable complexity */
 // Desafio 1
 function compareTrue(parametro1, parametro2) {
   if (parametro1 === true && parametro2 === true) {
