@@ -108,6 +108,7 @@ function triangleCheck(lineA, lineB, lineC) {
     return true;
   }
 
+  // Aqui pesquisei e testei como funciona o Math.abs: https://www.w3schools.com/java/ref_math_abs.asp
   return false;
 }
 
