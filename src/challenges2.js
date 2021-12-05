@@ -3,7 +3,7 @@ function techList(techNames, name) {
   let orderedTechNames = techNames.sort();
   let techList = [];
 
-  for (let i = 0; i < techNames.length; i++) {
+  for (let i = 0; i < orderedTechNames.length; i++) {
     let techItem = {};
     techItem.tech = techNames[i];
     techItem.name = name;
@@ -87,8 +87,28 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let checkA = true;
+  let checkB = true;
+  let checkC = true;
+
+  if (lineA < lineB + lineC) {
+    checkA = lineA > Math.abs(lineB - lineC);
+  }
+
+  if (lineB < lineA + lineC) {
+    checkB = lineB > Math.abs(lineA - lineC);
+  }
+
+  if (lineC < lineA + lineB) {
+    checkC = lineC > Math.abs(lineA - lineB);
+  }
+
+  if (checkA === true && checkB === true && checkC === true) {
+    return true;
+  }
+
+  return false;
 }
 
 // Desafio 13
