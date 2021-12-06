@@ -125,6 +125,8 @@ function hydrate(drinks) {
     return totalDrinks + ' copos de água';
   }
   return totalDrinks + ' copo de água';
+
+  // Pesquisei como retirar somente números de uma string e isso me levou ao .match. Depois pesquisei como tranformar uma string em um número, o que me levou ao parseInt. Ambos eu pesquisei mais a fundo suas funcionalidades no W3Schools e MDN Web Docs
 }
 
 module.exports = {
