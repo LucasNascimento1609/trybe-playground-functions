@@ -14,10 +14,8 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName(arrayNomes) {
-  // eslint-disable-next-line prefer-template
-  let nomes = arrayNomes[arrayNomes.length - 1] + ', ' + arrayNomes[0];
-  return nomes;
+function concatName(arrayNames) {
+  return `${arrayNames[arrayNames.length - 1]}, ${arrayNames[0]}`;
 }
 
 // Desafio 5
