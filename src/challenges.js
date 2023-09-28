@@ -53,21 +53,16 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayNumeros) {
-  let resultado = [];
-  for (let i = 0; i < arrayNumeros.length; i += 1) {
-    if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0) {
-      resultado.push('fizzBuzz');
-    } else if (arrayNumeros[i] % 5 === 0) {
-      resultado.push('buzz');
-    } else if (arrayNumeros[i] % 3 === 0) {
-      resultado.push('fizz');
-    } else {
-      resultado.push('bug!');
-    }
-  }
-
-  return resultado;
+function fizzBuzz(numbers) {
+  return numbers.map((number) => {
+    if (number % 3 === 0 && number % 5 === 0) {
+      return 'fizzBuzz';
+    } if (number % 3 === 0) {
+      return 'fizz';
+    } if (number % 5 === 0) {
+      return 'buzz';
+    } return 'bug!';
+  });
 }
 
 // Desafio 9
