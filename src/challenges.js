@@ -1,9 +1,6 @@
 // Desafio 1
 function compareTrue(parametro1, parametro2) {
-  if (parametro1 === true && parametro2 === true) {
-    return true;
-  }
-  return false;
+  return parametro1 && parametro2;
 }
 
 // Desafio 2
@@ -104,24 +101,24 @@ function encode(stringEncode) {
 
   for (let i = 0; i < stringEncode.length; i += 1) {
     switch (stringSeparada[i]) {
-      case 'a':
-        stringCodificada.push('1');
-        break;
-      case 'e':
-        stringCodificada.push('2');
-        break;
-      case 'i':
-        stringCodificada.push('3');
-        break;
-      case 'o':
-        stringCodificada.push('4');
-        break;
-      case 'u':
-        stringCodificada.push('5');
-        break;
-      default:
-        stringCodificada.push(stringSeparada[i]);
-        break;
+    case 'a':
+      stringCodificada.push('1');
+      break;
+    case 'e':
+      stringCodificada.push('2');
+      break;
+    case 'i':
+      stringCodificada.push('3');
+      break;
+    case 'o':
+      stringCodificada.push('4');
+      break;
+    case 'u':
+      stringCodificada.push('5');
+      break;
+    default:
+      stringCodificada.push(stringSeparada[i]);
+      break;
     }
   }
 
@@ -135,24 +132,24 @@ function decode(stringDecode) {
 
   for (let i = 0; i < stringDecode.length; i += 1) {
     switch (stringSeparada[i]) {
-      case '1':
-        stringDecodificada.push('a');
-        break;
-      case '2':
-        stringDecodificada.push('e');
-        break;
-      case '3':
-        stringDecodificada.push('i');
-        break;
-      case '4':
-        stringDecodificada.push('o');
-        break;
-      case '5':
-        stringDecodificada.push('u');
-        break;
-      default:
-        stringDecodificada.push(stringSeparada[i]);
-        break;
+    case '1':
+      stringDecodificada.push('a');
+      break;
+    case '2':
+      stringDecodificada.push('e');
+      break;
+    case '3':
+      stringDecodificada.push('i');
+      break;
+    case '4':
+      stringDecodificada.push('o');
+      break;
+    case '5':
+      stringDecodificada.push('u');
+      break;
+    default:
+      stringDecodificada.push(stringSeparada[i]);
+      break;
     }
   }
 
