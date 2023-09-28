@@ -27,23 +27,13 @@ function generatePhoneNumber(numbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let checkA = true;
-  let checkB = true;
-  let checkC = true;
-
-  if (lineA < lineB + lineC) {
-    checkA = lineA > Math.abs(lineB - lineC);
+  for (let index = 0; index < 3; index += 1) {
+    const lines = [lineA, lineB, lineC];
+    const currentLine = lines.splice(index, 1);
+    if (currentLine[0] < lines[0] + lines[1]) {
+      return currentLine[0] > Math.abs(lines[0] - lines[1]);
+    }
   }
-
-  if (lineB < lineA + lineC) {
-    checkB = lineB > Math.abs(lineA - lineC);
-  }
-
-  if (lineC < lineA + lineB) {
-    checkC = lineC > Math.abs(lineA - lineB);
-  }
-
-  if (checkA === true && checkB === true && checkC === true) {
     return true;
   }
 
