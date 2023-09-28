@@ -11,66 +11,18 @@ function generatePhoneNumber(numbers) {
     return 'Array com tamanho incorreto.';
   }
 
-  for (let wrongNumber of numbers) {
-    if (wrongNumber < 0 || wrongNumber > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-  }
+  const checkNumbers = numbers.some((number) => {
+    const repeats = numbers.filter((num) => num === number).length;
+    return number < 0 || number > 9 || repeats >= 3;
+  });
 
-  let repeatNumbers = 0;
+  const areaCode = numbers.slice(0, 2).join('');
+  const phoneNumber = `${numbers.slice(2, 7).join('')}-${numbers.slice(7, 11).join('')}`;
+  const wrongNumbers = 'não é possível gerar um número de telefone com esses valores';
 
-  for (let i = 0; i < numbers.length; i += 1) {
-    for (let j = 0; j < i; j += 1) {
-      repeatNumbers += numbers[i] === numbers[j];
-      if (repeatNumbers > 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-    }
-  }
+  return checkNumbers ? wrongNumbers : `(${areaCode}) ${phoneNumber}`;
+}
 
-  let phoneNumber = ['('];
-
-  for (let i = 0; i < numbers.length; i += 1) {
-    switch (phoneNumber.length) {
-      case 1:
-        phoneNumber.push(numbers[i]);
-        break;
-      case 2:
-        phoneNumber.push(numbers[i] + ') ');
-        break;
-      case 3:
-        phoneNumber.push(numbers[i]);
-        break;
-      case 4:
-        phoneNumber.push(numbers[i]);
-        break;
-      case 5:
-        phoneNumber.push(numbers[i]);
-        break;
-      case 6:
-        phoneNumber.push(numbers[i]);
-        break;
-      case 7:
-        phoneNumber.push(numbers[i] + '-');
-        break;
-      case 8:
-        phoneNumber.push(numbers[i]);
-        break;
-      case 9:
-        phoneNumber.push(numbers[i]);
-        break;
-      case 10:
-        phoneNumber.push(numbers[i]);
-        break;
-      case 11:
-        phoneNumber.push(numbers[i]);
-        break;
-      default:
-        break;
-    }
-  }
-
-  return phoneNumber.join('');
 }
 
 // Desafio 12
