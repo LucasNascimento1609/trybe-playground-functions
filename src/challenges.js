@@ -66,65 +66,16 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode(stringEncode) {
-  let stringSeparada = stringEncode.split('');
-  let stringCodificada = [];
+function encode(string) {
+  const code = { a: 1, e: 2, i: 3, o: 4, u: 5 };
 
-  for (let i = 0; i < stringEncode.length; i += 1) {
-    switch (stringSeparada[i]) {
-    case 'a':
-      stringCodificada.push('1');
-      break;
-    case 'e':
-      stringCodificada.push('2');
-      break;
-    case 'i':
-      stringCodificada.push('3');
-      break;
-    case 'o':
-      stringCodificada.push('4');
-      break;
-    case 'u':
-      stringCodificada.push('5');
-      break;
-    default:
-      stringCodificada.push(stringSeparada[i]);
-      break;
-    }
-  }
-
-  return stringCodificada.join('');
-  // Aprendi a usar o .split e .join ao buscar em outro exercício como trazer uma string de trás para frente no StackOverflow: https://pt.stackoverflow.com/questions/5943/como-inverter-uma-string-em-javascript
+  return string.split('').map((letter) => code[letter] || letter).join('');
 }
 
-function decode(stringDecode) {
-  let stringSeparada = stringDecode.split('');
-  let stringDecodificada = [];
+function decode(string) {
+  const code = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
 
-  for (let i = 0; i < stringDecode.length; i += 1) {
-    switch (stringSeparada[i]) {
-    case '1':
-      stringDecodificada.push('a');
-      break;
-    case '2':
-      stringDecodificada.push('e');
-      break;
-    case '3':
-      stringDecodificada.push('i');
-      break;
-    case '4':
-      stringDecodificada.push('o');
-      break;
-    case '5':
-      stringDecodificada.push('u');
-      break;
-    default:
-      stringDecodificada.push(stringSeparada[i]);
-      break;
-    }
-  }
-
-  return stringDecodificada.join('');
+  return string.split('').map(((letter) => code[letter] || letter)).join('');
 }
 
 module.exports = {
