@@ -23,8 +23,6 @@ function generatePhoneNumber(numbers) {
   return checkNumbers ? wrongNumbers : `(${areaCode}) ${phoneNumber}`;
 }
 
-}
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   for (let index = 0; index < 3; index += 1) {
@@ -34,11 +32,8 @@ function triangleCheck(lineA, lineB, lineC) {
       return currentLine[0] > Math.abs(lines[0] - lines[1]);
     }
   }
-    return true;
-  }
 
-  // Aqui pesquisei e testei como funciona o Math.abs: https://www.w3schools.com/java/ref_math_abs.asp
-  return false;
+  return true;
 }
 
 // Desafio 13
