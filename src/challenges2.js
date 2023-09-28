@@ -43,19 +43,8 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(drinks) {
-  let numberOfDrinks = drinks.match(/\d/g);
-  let totalDrinks = 0;
-
-  for (let i = 0; i < numberOfDrinks.length; i += 1) {
-    totalDrinks += parseInt(numberOfDrinks[i]);
-  }
-
-  if (totalDrinks > 1) {
-    return totalDrinks + ' copos de água';
-  }
-  return totalDrinks + ' copo de água';
-
-  // Pesquisei como retirar somente números de uma string e isso me levou ao .match. Depois pesquisei como tranformar uma string em um número, o que me levou ao parseInt. Ambos eu pesquisei mais a fundo suas funcionalidades no W3Schools e MDN Web Docs
+  const totalWaters = drinks.match(/\d/g).map((drink) => +drink).reduce((acc, crr) => acc + crr);
+  return totalWaters > 1 ? `${totalWaters} copos de água` : `${totalWaters} copo de água`;
 }
 
 module.exports = {
