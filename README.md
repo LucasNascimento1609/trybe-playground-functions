@@ -1,10 +1,11 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Playground Functions
+
+## Descrição do Projeto
+
+O "Playground Functions" foi o segundo projeto desenvolvido durante o curso da Trybe. Ele testou os conhecimentos adquiridos na segunda sessão do curso, "Introdução à Javascript". Este projeto foi completamente desenvolvido em JavaScript e consiste em desafios básicos de programação.
+
+Neste projeto eu desenvolvi todas as funções dos arquivos `challenges.js`e `challenges2.js`. Todos os outros arquivos foram criados pela Trybe para avaliar meus conhecimentos.
+
+## Créditos
+
+- Trybe
